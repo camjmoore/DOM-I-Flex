@@ -94,3 +94,19 @@ contactContent[2].textContent = siteContent["contact"]["email"]
 
 let footerContent = document.querySelector("footer p")
 footerContent.textContent = siteContent["footer"]["copyright"]
+
+navItems.forEach(function(nav1thru6){
+  nav1thru6.style.color = 'green'
+})
+
+let newNavItem1 = document.createElement('a')
+newNavItem1.textContent = 'Team'
+newNavItem1.style.color = 'salmon'
+
+let newNavItem2 = document.createElement('a')
+newNavItem2.textContent = 'Blog'
+newNavItem2.style.color = 'salmon'
+
+let navBar = document.querySelector(".container header nav")
+navBar.appendChild(newNavItem1)
+navBar.prepend(newNavItem2)
