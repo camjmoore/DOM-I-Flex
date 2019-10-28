@@ -104,7 +104,7 @@ navItems.forEach(function(nav1thru6){
 
 let newNavItem1 = document.createElement('a')
 newNavItem1.textContent = 'Team'
-newNavItem1.style.color = 'salmon'
+newNavItem1.style.color = '#71eeb8'
 
 let newNavItem2 = document.createElement('a')
 newNavItem2.textContent = 'Blog'
@@ -115,13 +115,29 @@ navBar.appendChild(newNavItem1)
 navBar.prepend(newNavItem2)
 
 //## Stretch Goals
+let documentBody = document.querySelector('body')
+documentBody.style.background = 'linear-gradient(to right, #12c2e9, #c471ed, #f64f59)'
+
+middleImg.style.filter = 'grayscale(100%)'
+ctaImage.style.filter = 'grayscale(100%)'
+
+ctaButton.style.backgroundColor = 'black'
+ctaButton.style.color = '#71eeb8'
+
+topContentH4.forEach((h4) => {
+h4.style.color = '#71eeb8'
+})
+
+bottomContentH4.forEach((h4) => {
+  h4.style.color = '#71eeb8'
+})
+
+footerContent.style.color = '#71eeb8'
 
 const hipsum = {
   "mainContent": {
     "hipsterCopy":"Lorem ipsum dolor amet seitan cold-pressed meggings swag flannel. Sustainable etsy organic, cred migas la croix squid yr wayfarers disrupt echo park XOXO offal whatever. Wayfarers retro sartorial direct trade.",
-    "trendyCopy":"Shoreditch hammock banh mi, letterpress photo booth mustache forage. Banjo organic pickled helvetica franzen. Drinking vinegar dreamcatcher vinyl YOLO, tbh vice chillwave roof party butcher. Food truck succulents man bun blue bottle.",
-    "MillenialCopy":"XOXO 3 wolf moon celiac pop-up. Flannel locavore XOXO yr air plant ramps man bun, banh mi kombucha tilde dreamcatcher normcore taxidermy banjo coloring book. Fam subway tile lo-fi etsy chicharrones celiac +1 selvage meh.",
-    "generationZCopy":"Crucifix tousled paleo adaptogen church-key cred bicycle rights. Brooklyn flannel street art asymmetrical 3 wolf moon shabby chic blue bottle palo santo adaptogen yr cloud bread. Vice listicle readymade gluten-free small batch."
+    "trendyCopy":"Shoreditch hammock banh mi, letterpress photo booth mustache forage. Banjo organic pickled helvetica franzen. Drinking vinegar dreamcatcher vinyl YOLO, tbh vice chillwave roof party butcher. Food truck succulents man bun blue bottle."
   }
 }
 
