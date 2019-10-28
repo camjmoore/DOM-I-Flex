@@ -41,6 +41,8 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+//## Task 1: Create selectors to point your data into elements
+//## Task 2: Update the HTML with the JSON data
 let navItems = document.querySelectorAll(".container header nav a")
 navItems[0].textContent = siteContent["nav"]["nav-item-1"]
 navItems[1].textContent = siteContent["nav"]["nav-item-2"]
@@ -95,8 +97,9 @@ contactContent[2].textContent = siteContent["contact"]["email"]
 let footerContent = document.querySelector("footer p")
 footerContent.textContent = siteContent["footer"]["copyright"]
 
+//## Task 3: Add new content
 navItems.forEach(function(nav1thru6){
-  nav1thru6.style.color = 'green'
+  nav1thru6.style.color = '#71eeb8'
 })
 
 let newNavItem1 = document.createElement('a')
@@ -110,3 +113,42 @@ newNavItem2.style.color = 'salmon'
 let navBar = document.querySelector(".container header nav")
 navBar.appendChild(newNavItem1)
 navBar.prepend(newNavItem2)
+
+//## Stretch Goals
+
+const hipsum = {
+  "mainContent": {
+    "hipsterCopy":"Lorem ipsum dolor amet seitan cold-pressed meggings swag flannel. Sustainable etsy organic, cred migas la croix squid yr wayfarers disrupt echo park XOXO offal whatever. Wayfarers retro sartorial direct trade.",
+    "trendyCopy":"Shoreditch hammock banh mi, letterpress photo booth mustache forage. Banjo organic pickled helvetica franzen. Drinking vinegar dreamcatcher vinyl YOLO, tbh vice chillwave roof party butcher. Food truck succulents man bun blue bottle.",
+    "MillenialCopy":"XOXO 3 wolf moon celiac pop-up. Flannel locavore XOXO yr air plant ramps man bun, banh mi kombucha tilde dreamcatcher normcore taxidermy banjo coloring book. Fam subway tile lo-fi etsy chicharrones celiac +1 selvage meh.",
+    "generationZCopy":"Crucifix tousled paleo adaptogen church-key cred bicycle rights. Brooklyn flannel street art asymmetrical 3 wolf moon shabby chic blue bottle palo santo adaptogen yr cloud bread. Vice listicle readymade gluten-free small batch."
+  }
+}
+
+topContentText[0].addEventListener('click', () => {
+  topContentText[0].textContent = hipsum["mainContent"]["hipsterCopy"]
+}) 
+
+topContentText[0].addEventListener('dblclick', () => {
+  topContentText[0].textContent = siteContent["main-content"]["features-content"]
+})
+
+topContentText[1].addEventListener('click', () => {
+  topContentText[1].textContent = hipsum["mainContent"]["trendyCopy"]
+})
+
+topContentText[1].addEventListener('dblclick', () => {
+  topContentText[1].textContent = siteContent["main-content"]["about-content"]
+})
+
+navItems.forEach((navItem) => {
+  navItem.addEventListener('mouseenter', () => {
+    navItem.style.transform = "scale(2.0)"
+  })
+})
+
+navItems.forEach((navItem) => {
+  navItem.addEventListener('mouseleave', () => {
+    navItem.style.transform = "scale(1.0)"
+  })
+})
